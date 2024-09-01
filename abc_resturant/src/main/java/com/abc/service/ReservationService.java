@@ -1,17 +1,21 @@
 package com.abc.service;
 
 import com.abc.dao.ReservationDAO;
-import com.abc.model.Reservation;
+import com.abc.model.Reservation;  // Import the Reservation class
 
 public class ReservationService {
     private ReservationDAO reservationDAO;
 
     public ReservationService() {
-        reservationDAO = new ReservationDAO();
+        this.reservationDAO = new ReservationDAO();
+    }
+
+    // Protected setter to allow modification in tests
+    protected void setReservationDAO(ReservationDAO reservationDAO) {
+        this.reservationDAO = reservationDAO;
     }
 
     public boolean bookTable(String name, int numberOfPeople, String date, String time) {
-        // Use the constructor with the required fields
         Reservation reservation = new Reservation(name, numberOfPeople, date, time);
         return reservationDAO.addReservation(reservation);
     }

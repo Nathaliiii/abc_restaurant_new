@@ -6,8 +6,14 @@ import com.abc.model.Order;
 public class OrderService {
     private OrderDAO orderDAO;
 
+    // Constructor for Dependency Injection
+    public OrderService(OrderDAO orderDAO) {
+        this.orderDAO = orderDAO;
+    }
+
+    // Default constructor for normal use
     public OrderService() {
-        orderDAO = new OrderDAO();
+        this.orderDAO = new OrderDAO();
     }
 
     public boolean placeOrder(String customerName, String contactNumber, String foodItem, int quantity, String specialRequests, String paymentMethod) {
