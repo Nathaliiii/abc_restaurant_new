@@ -78,7 +78,7 @@
 
 <div class="container">
     <div class="image-container">
-        <img src="images/payment.jpg" alt="Process Payments">
+        <img src="images/payment.jpg" alt="Process Payments" style="width: 100%; height: auto;">
     </div>
 
     <div class="payment-form-container">
@@ -98,7 +98,7 @@
                 </div>
             <% } %>
 
-            <form action="processPaymentAction.jsp" method="post">
+            <form action="processPaymentAction" method="post">
                 <label for="reservationId">Reservation ID:</label>
                 <input type="text" id="reservationId" name="reservationId" required>
 

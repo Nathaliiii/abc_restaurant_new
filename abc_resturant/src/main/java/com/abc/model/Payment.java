@@ -1,11 +1,22 @@
 package com.abc.model;
 
+import java.math.BigDecimal;
+
 public class Payment {
+    private int id;
     private String reservationId;
-    private double amount;
+    private BigDecimal amount;
     private String paymentMethod;
 
-    // Getters and setters
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getReservationId() {
         return reservationId;
     }
@@ -14,11 +25,11 @@ public class Payment {
         this.reservationId = reservationId;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

@@ -9,8 +9,9 @@ public class UserManagementService {
 
     private UserRepository userRepository;
 
-    public UserManagementService() {
-        userRepository = new UserRepository();
+    // Constructor with UserRepository parameter
+    public UserManagementService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public boolean addUser(AppUser user) throws SQLException {
