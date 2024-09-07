@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        /* CSS directly in JSP */
+        
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/contactbackground.jpg'); /* Background image */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the image */
+            background-image: url('images/contactbackground.jpg'); 
+            background-size: cover; 
+            background-position: center; 
             margin: 0;
             padding: 0;
             color: #333;

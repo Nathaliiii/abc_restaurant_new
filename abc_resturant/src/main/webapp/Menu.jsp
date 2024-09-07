@@ -269,7 +269,7 @@
         </div>
         <div class="menu-item">
             <div>
-                <h3>mushroom with Vegetables</h3>
+                <h3>mushroom with Vegitables</h3>
                 <p>Steamed seasonal vegetables with mushroom and olive oil.</p>
             </div>
             <span>Rs.350.00</span>

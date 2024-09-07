@@ -1,7 +1,8 @@
 package com.abc.controller;
 
 import com.abc.dao.AdminStaffDAO;
-import com.abc.model.AdminStafflog;  // Update import statement
+import com.abc.model.AdminStafflog;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,17 +18,18 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
-        
+
         AdminStaffDAO adminStaffDAO = new AdminStaffDAO();
-        AdminStafflog user = adminStaffDAO.getUserByUsername(username, role);  // Updated to AdminStaffLog
-        
+        AdminStafflog user = adminStaffDAO.getUserByUsername(username, role);
+
         if (user != null && user.getPassword().equals(password)) {
-            if ("admin".equals(role)) {
-                response.sendRedirect("AdminDashboard.jsp");
-            } else if ("staff".equals(role)) {
-                response.sendRedirect("StaffDashboard.jsp");
-            }
+            // Set success message in request
+            request.setAttribute("successMessage", "Logged in successfully as " + (role.equals("admin") ? "Admin" : "Staff") + "!");
+            
+            // Forward back to login page with success message
+            request.getRequestDispatcher("AdminStafflogin.jsp").forward(request, response);
         } else {
+            // Set error message in request
             request.setAttribute("errorMessage", "Invalid credentials or role");
             request.getRequestDispatcher("AdminStafflogin.jsp").forward(request, response);
         }

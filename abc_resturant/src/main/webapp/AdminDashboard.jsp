@@ -18,28 +18,28 @@
 
         .sidebar {
             width: 20%;
-            background-color: #cce7ff; /* Light Blue */
+            background-color: #cce7ff; 
             padding: 20px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar a {
             display: block;
-            margin: 20px 0; /* Increased margin for more spacing */
-            padding: 15px; /* Larger padding for bigger buttons */
+            margin: 20px 0; 
+            padding: 15px; 
             text-decoration: none;
             color: white;
-            background-color: #0066cc; /* Dark Blue */
-            border-radius: 8px; /* Rounded corners */
+            background-color: #0066cc; 
+            border-radius: 8px; 
             text-align: center;
         }
 
         .sidebar a:hover {
-            background-color: #005bb5; /* Hover dark blue */
+            background-color: #005bb5; 
         }
 
         .sidebar img {
-            width: 100%; /* Adjust as needed */
+            width: 100%; 
             height: auto;
             border-radius: 5px;
             margin-top: 20px;
@@ -104,7 +104,7 @@
     <script>
         function logOut() {
             alert("You have logged out successfully.");
-            window.location.href = 'AdminStafflogin.jsp'; // Redirect to AdminStafflogin.jsp
+            window.location.href = 'AdminStafflogin.jsp'; 
         }
     </script>
 </head>

@@ -33,6 +33,6 @@ public class CustomerReservationServlet extends HttpServlet {
             request.setAttribute("message", "Reservation failed. Please try again.");
         }
 
-        request.getRequestDispatcher("Reservation.jsp").forward(request, response); // Ensure Reservation.jsp exists
+        request.getRequestDispatcher("Reservation.jsp").forward(request, response); 
     }
 }

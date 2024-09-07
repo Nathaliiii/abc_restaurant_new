@@ -18,24 +18,24 @@
 
         .sidebar {
             width: 20%;
-            background-color: #d0f0c0; /* Light Green */
+            background-color: #d0f0c0; 
             padding: 20px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar a {
             display: block;
-            margin: 20px 0; /* Increased margin for more spacing */
-            padding: 15px; /* Larger padding for bigger buttons */
+            margin: 20px 0; 
+            padding: 15px; 
             text-decoration: none;
             color: white;
-            background-color: #006400; /* Dark Green */
-            border-radius: 8px; /* Rounded corners */
+            background-color: #006400; 
+            border-radius: 8px; 
             text-align: center;
         }
 
         .sidebar a:hover {
-            background-color: #004d00; /* Hover Dark Green */
+            background-color: #004d00; 
         }
 
         .sidebar img {
@@ -104,27 +104,27 @@
     <script>
         function logOut() {
             alert("You have logged out successfully.");
-            window.location.href = 'AdminStafflogin.jsp'; // Redirect to AdminStafflogin.jsp
+            window.location.href = 'AdminStafflogin.jsp'; 
         }
     </script>
 </head>
 <body>
 
 <div class="container">
-    <!-- Sidebar -->
+   
     <div class="sidebar">
         <a href="manageReservations.jsp">Manage Reservations</a>
         <a href="respondQueries.jsp">Respond to Queries</a>
-        <a href="processPayments.jsp">Process Payments</a>
-        <a href="javascript:void(0);" onclick="logOut();">Logout</a> <!-- Updated Log Out Link -->
+        <a href="ProcessPayment.jsp">Process Payments</a>
+        <a href="javascript:void(0);" onclick="logOut();">Logout</a> 
 
-        <!-- Add an Image -->
-        <img src="images/staffdashboard.jpg" alt="Sidebar Image"> <!-- Adjust src as needed -->
+        
+        <img src="images/staffdashboard.jpg" alt="Sidebar Image"> 
     </div>
 
-    <!-- Main Content -->
+    
     <div class="content">
-        <!-- Welcome Message -->
+        
         <div class="welcome-section">
             <h1>Welcome!</h1>
             <p>This is the Staff Dashboard. Here you can manage reservations, respond to customer queries, and process payments. Your main hub for efficient operations and customer service!</p>

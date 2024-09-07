@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Add Customer</title>
     <style>
-        /* Basic Reset */
+        
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #e8f5e9; /* Light Green Background */
+            background-color: #e8f5e9; 
             color: #333;
             padding: 20px;
         }
@@ -105,7 +105,7 @@
     <div class="container">
         <h1>Add Customer</h1>
 
-        <!-- Display Success or Error Message -->
+        
         <%
             String successMessage = (String) request.getAttribute("successMessage");
             String errorMessage = (String) request.getAttribute("errorMessage");

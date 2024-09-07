@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Respond to Queries</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
         }
 
         h1 {
-            color: #006400; /* Dark Green */
+            color: #006400; 
         }
 
         .query-table {
@@ -71,8 +71,8 @@
         }
 
         .image-container img {
-            max-width: 400px; /* Set the maximum width */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 400px; 
+            height: auto; 
             border-radius: 5px;
         }
     </style>

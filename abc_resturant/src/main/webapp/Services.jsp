@@ -8,10 +8,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/servicesbackground.jpg'); /* Add your background image */
-            background-size: cover; /* Cover the entire page */
-            background-position: center; /* Center the image */
-            background-color: #fefaf2; /* Fallback color in case the image doesn't load */
+            background-image: url('images/servicesbackground.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-color: #fefaf2; 
             margin: 0;
             padding: 0;
         }
@@ -19,7 +19,7 @@
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+            background-color: rgba(255, 255, 255, 0.9); 
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }

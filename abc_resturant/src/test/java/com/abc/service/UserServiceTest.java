@@ -15,12 +15,12 @@ public class UserServiceTest {
 
     @BeforeEach
     public void setUp() {
-        // Mock UserDAO
+        
         mockUserDAO = Mockito.mock(UserDAO.class);
 
-        // Initialize UserService and inject mock DAO
+        
         userService = new UserService();
-        userService.setUserDAO(mockUserDAO);  // Use the setter to inject the mock DAO
+        userService.setUserDAO(mockUserDAO);  
     }
 
     @Test
@@ -30,14 +30,14 @@ public class UserServiceTest {
         String contactNumber = "1234567890";
         String password = "password123";
 
-        // Mock the DAO method to return true
+        
         when(mockUserDAO.saveUser(name, email, contactNumber, password)).thenReturn(true);
 
-        // Call the service method and assert the result
+        
         boolean result = userService.registerUser(name, email, contactNumber, password);
-        assertTrue(result);  // Expecting a successful registration
+        assertTrue(result);  
 
-        // Verify that saveUser was called exactly once
+        
         verify(mockUserDAO, times(1)).saveUser(name, email, contactNumber, password);
     }
 }

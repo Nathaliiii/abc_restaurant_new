@@ -1,6 +1,5 @@
 package com.abc.dao;
-
-import com.abc.model.Reservation; // Import the Reservation class
+import com.abc.model.Reservation; 
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -14,7 +13,7 @@ public class ReservationDAO {
         try (Connection connection = DBConnector.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SQL)) {
 
-            // Print SQL and parameters for debugging
+            
             System.out.println("Executing SQL: " + INSERT_SQL);
             System.out.println("Name: " + reservation.getName());
             System.out.println("Number of People: " + reservation.getNumberOfPeople());
@@ -23,16 +22,16 @@ public class ReservationDAO {
 
             preparedStatement.setString(1, reservation.getName());
             preparedStatement.setInt(2, reservation.getNumberOfPeople());
-            preparedStatement.setDate(3, java.sql.Date.valueOf(reservation.getDate())); // Convert String to SQL Date
+            preparedStatement.setDate(3, java.sql.Date.valueOf(reservation.getDate())); 
             
-            // Handle time formatting
+           
             String timeString = reservation.getTime();
             if (timeString != null && !timeString.isEmpty()) {
-                // Append ":00" to the time to make it "HH:MM:SS"
+                
                 if (timeString.length() == 5) {
                     timeString += ":00";
                 }
-                preparedStatement.setTime(4, java.sql.Time.valueOf(timeString)); // Convert String to SQL Time
+                preparedStatement.setTime(4, java.sql.Time.valueOf(timeString)); 
             } else {
                 preparedStatement.setTime(4, null);
             }
@@ -41,7 +40,7 @@ public class ReservationDAO {
             return rowsAffected > 0;
 
         } catch (SQLException e) {
-            e.printStackTrace(); // Check the server logs or console for error details
+            e.printStackTrace(); 
             return false;
         }
     }

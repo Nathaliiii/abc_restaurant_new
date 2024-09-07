@@ -9,9 +9,9 @@
         /* CSS directly in JSP */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/Orderbackground.jpg'); /* Updated background image */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the image */
+            background-image: url('images/Orderbackground.jpg'); 
+            background-size: cover; 
+            background-position: center; 
             margin: 0;
             padding: 0;
             color: #333;
@@ -125,13 +125,13 @@
         <div class="order-wrapper">
             <!-- Left side image section -->
             <div class="image-section">
-                <img src="images/order.jpg" alt="Food Order Image"> <!-- Ensure the image path is correct -->
+                <img src="images/order.jpg" alt="Food Order Image"> 
             </div>
 
             <!-- Right side order details section -->
             <div class="order-section">
                 <h2>Food Order</h2>
-                <form action="submitOrder" method="post"> <!-- Updated form action to match servlet -->
+                <form action="submitOrder" method="post"> 
                     <div class="order-group">
                         <label for="customerName">Name</label>
                         <input type="text" id="customerName" name="customerName" required>

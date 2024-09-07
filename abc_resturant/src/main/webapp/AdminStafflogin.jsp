@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/adminloginbackground.jpg'); /* Ensure this path is correct */
+            background-image: url('images/adminloginbackground.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -20,7 +20,7 @@
         }
         .image-section {
             flex: 1;
-            background-image: url('images/AdminStafflogin.jpg'); /* Ensure this path is correct */
+            background-image: url('images/AdminStafflogin.jpg'); 
             background-size: cover;
             background-position: center;
         }
@@ -66,6 +66,10 @@
             color: red;
             margin-bottom: 10px;
         }
+        .success-message {
+            color: green;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +94,20 @@
                     <input type="submit" value="Login">
                 </form>
                 <div class="error-message">
-                    <%= request.getAttribute("errorMessage") != null ? request.getAttribute("errorMessage") : "" %>
+                    <%
+                        String errorMessage = (String) request.getAttribute("errorMessage");
+                        if (errorMessage != null) {
+                            out.print(errorMessage);
+                        }
+                    %>
+                </div>
+                <div class="success-message">
+                    <%
+                        String successMessage = (String) request.getAttribute("successMessage");
+                        if (successMessage != null) {
+                            out.print(successMessage);
+                        }
+                    %>
                 </div>
             </div>
         </div>

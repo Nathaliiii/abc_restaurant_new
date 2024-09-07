@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Manage Reservations</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,7 +24,7 @@
         }
 
         h1 {
-            color: #006400; /* Dark Green */
+            color: #006400; 
         }
 
         .reservation-table {
@@ -101,36 +101,37 @@
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
+        </thead>
+        <tbody>
+            <!-- Sample Data -->
             <tr>
                 <td>101</td>
-                <td>Poornima Weerasekara </td>
+                <td>Poornima Weerasekara</td>
                 <td>8</td>
                 <td>24/08/2024</td>
-                 <td>08:00 am</td>
-                  <td>Confirmed</td>
-                   <td>cash</td>
+                <td>08:00 am</td>
+                <td>Confirmed</td>
+                <td>Cash</td>
             </tr>
             <tr>
                 <td>102</td>
                 <td>Sonal Perera</td>
                 <td>2</td>
                 <td>19/08/2024</td>
-                 <td>09:00 pm</td>
-                  <td>pending</td>
-                   <td>cash</td>
+                <td>09:00 pm</td>
+                <td>Pending</td>
+                <td>Cash</td>
             </tr>
             <tr>
                 <td>103</td>
                 <td>Waruni Silva</td>
                 <td>5</td>
                 <td>10/09/2024</td>
-                 <td>05:00 pm</td>
-                  <td>pending</td>
-                   <td>online payment</td>
+                <td>05:00 pm</td>
+                <td>Pending</td>
+                <td>Online Payment</td>
             </tr>
-        </thead>
-        <tbody>
-            <%-- Dynamically populated reservation data --%>
+            <!-- Dynamic Data -->
             <%
                 List<Reservation> reservations = (List<Reservation>) request.getAttribute("reservations");
                 if (reservations != null) {
@@ -157,9 +158,13 @@
         </tbody>
     </table>
 
-    <!-- Buttons for other actions -->
+    <!-- Buttons Below the Table -->
     <div class="button-group">
         <a href="addCustomer.jsp" class="button">Add Customer</a>
+        <a href="editReservation.jsp" class="button">Edit</a>
+        <form action="deleteReservation" method="post" style="display:inline;">
+            <button type="submit" class="button">Delete</button>
+        </form>
         <a href="StaffDashboard.jsp" class="button">Staff Dashboard</a>
     </div>
 

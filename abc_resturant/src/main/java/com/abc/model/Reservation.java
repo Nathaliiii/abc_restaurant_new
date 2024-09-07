@@ -3,12 +3,12 @@ package com.abc.model;
 public class Reservation {
     private String id;
     private String name;
-    private int numberOfPeople; // Field for number of people
+    private int numberOfPeople; 
     private String date;
     private String time;
     private String status;
 
-    // Constructor with all fields
+   
     public Reservation(String id, String name, int numberOfPeople, String date, String time, String status) {
         this.id = id;
         this.name = name;
@@ -18,7 +18,7 @@ public class Reservation {
         this.status = status;
     }
 
-    // Constructor with required fields
+   
     public Reservation(String name, int numberOfPeople, String date, String time) {
         this.name = name;
         this.numberOfPeople = numberOfPeople;
@@ -26,10 +26,10 @@ public class Reservation {
         this.time = time;
     }
 
-    // Default Constructor
+   
     public Reservation() {}
 
-    // Getters and Setters
+    
     public String getId() {
         return id;
     }

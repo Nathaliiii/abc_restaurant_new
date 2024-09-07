@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #001f3f; /* Dark blue background */
+            background-color: #001f3f; 
             margin: 0;
             padding: 0;
         }
@@ -25,14 +25,14 @@
         .container {
             width: 80%;
             margin: 20px auto;
-            background-color: #add8e6; /* Light blue background for form */
+            background-color: #add8e6; 
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            color: #fff; /* White text for header */
+            color: #fff; 
         }
         .form-section {
             display: flex;

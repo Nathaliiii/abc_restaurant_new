@@ -1,13 +1,10 @@
 package com.abc.service;
-
 import com.abc.dao.ContactUsDAO;
 import com.abc.model.ContactUs;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
 import java.sql.SQLException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -28,7 +25,7 @@ public class ContactUsServiceTest {
         contactUsService.addContactUs(contactUs);
 
         Mockito.verify(contactUsDAO).insertContactUs(contactUs);
-        System.out.println("\033[0;32mTest passed: testAddContactUs\033[0m"); // Output in green color
+        System.out.println("\033[0;32mTest passed: testAddContactUs\033[0m"); 
     }
 
     @Test
@@ -39,7 +36,7 @@ public class ContactUsServiceTest {
         ContactUs result = contactUsService.getContactUsById(1);
 
         assertEquals(contactUs, result);
-        System.out.println("\033[0;32mTest passed: testGetContactUsById\033[0m"); // Output in green color
+        System.out.println("\033[0;32mTest passed: testGetContactUsById\033[0m"); 
     }
 
     @Test
@@ -49,6 +46,6 @@ public class ContactUsServiceTest {
         ContactUs result = contactUsService.getContactUsById(1);
 
         assertEquals(null, result);
-        System.out.println("\033[0;32mTest passed: testGetContactUsByIdNotFound\033[0m"); // Output in green color
+        System.out.println("\033[0;32mTest passed: testGetContactUsByIdNotFound\033[0m"); 
     }
 }
